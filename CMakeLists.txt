@@ -9,6 +9,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+enable_testing()
+
 add_executable(order_book_simulator
     src/main.cpp
     src/order.cpp
@@ -31,3 +33,5 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
             -Wshadow
     )
 endif()
+
+add_subdirectory(tests)
